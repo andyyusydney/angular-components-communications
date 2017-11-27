@@ -1,0 +1,6 @@
+<form class="form" ng-submit="form.submit()">
+  <div ng-repeat="item in form.checkboxes">
+    <checkbox id="$index" label="item.label" value="item.value" change="item.change"></checkbox>
+  </div>
+  <button type="submit">Submit</button>
+</div>

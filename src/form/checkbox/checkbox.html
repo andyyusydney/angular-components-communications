@@ -1,0 +1,6 @@
+<span ng-switch="checkbox.value">
+	<input ng-switch-when="true" checked id="{{checkbox.id}}" type="checkbox" ng-change="checkbox.clickHandler()" ng-model="checkbox.value" />
+	<input ng-switch-when="false" id="{{checkbox.id}}" type="checkbox" ng-change="checkbox.clickHandler()" ng-model="checkbox.value" />
+	<input ng-switch-when="disabled" disabled id="{{checkbox.id}}" type="checkbox" ng-change="checkbox.clickHandler()" ng-model="checkbox.value" />
+</span>
+<label>{{checkbox.label}}</label>
