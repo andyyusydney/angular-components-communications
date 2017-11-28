@@ -14,7 +14,6 @@ export default class CheckboxController {
   $onChanges(changes) {
   	/*
   	  console.log("id=%d, changes=%s", this.id, JSON.stringify(changes));
-  	  changes.value.previousValue = {'a':changes.value};
       this.value = !changes.value;
       */
   }
