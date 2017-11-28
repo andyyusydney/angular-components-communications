@@ -1,12 +1,11 @@
-//import './welcome.less';
-
+import './checkbox.scss';
 import CheckboxController from './CheckboxController';
 
 /* @ngInject */
 export default {
 	bindings: {
-		id: '=',		
-		label: '=',
+		id: '<',		
+		label: '<',
 		value: '=',
 		change: '&'
 	},

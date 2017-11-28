@@ -1,0 +1,60 @@
+label {
+	display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 18px;
+
+    >input[type="checkbox"] {
+	    position: absolute;
+	    z-index: -1;
+	    opacity: 0;
+
+	    & :disabled ~ .indicator {
+		  background: #fff;
+		  opacity: 0.6;
+		  pointer-events: none;
+		}
+
+	    & ~ .indicator {
+		  background: #fff;
+		}
+
+		&:checked ~ .indicator:after,
+		&:disabled ~ .indicator:after
+		 {
+		  display: block;
+		}
+
+		&:disabled ~ .indicator:after {
+		  border-color: #7b7b7b;
+		  border-color: #ddd;
+		  width: 131%;
+		  height: 0%;
+		  border-bottom: 1px solid #ddd;
+		  transform: translateY(5px) translateX(-12px) rotate(-45deg);
+		}
+	}
+
+	.indicator {
+	    position: absolute;
+	    top: 2px;
+	    left: 0;
+	    height: 20px;
+	    width: 20px;
+	    border: 2px solid #ddd;
+	    &:after {
+		  content: '';
+		  position: absolute;
+		  display: none;
+		  left: 8px;
+		  top: 4px;
+		  width: 3px;
+		  height: 8px;
+		  border: solid #000;
+		  border-width: 0 2px 2px 0;
+		  transform: rotate(45deg);
+		}
+	}
+}
